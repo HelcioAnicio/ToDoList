@@ -74,12 +74,15 @@ body
             width: 100%
             
             .task
+                border: 1px solid $color_light
+                border-radius: 5px
+                margin: 0 auto
                 padding: 5px 5px 5px 10px
                 display: flex
                 align-items: center
                 justify-content: space-between
                 height: max-content
-                width: 100%
+                width: 95%
 
                 p
                     font: 400 1rem 'Nunito', sans-serif
@@ -92,6 +95,7 @@ body
                 display: flex
                 align-items: center
                 gap: 2px
+                border-radius: 10px
 
                 button
                     width: 50%
@@ -106,4 +110,16 @@ body
 
                     .fa-circle-xmark
                         color: $iconX
-            
+
+
+
+.error 
+    background-color: $backgrounds !important
+    border: 2px solid $iconX !important
+
+    &::placeholder
+        color: $black !important
+
+.finished
+    text-decoration: line-through
+    color: rgba(0, 0, 0, .6)
