@@ -1,35 +1,109 @@
-html, body
+@import 'variables'
+    
+*
     margin: 0
     padding: 0
     font-size: 16px
+    box-sizing: border-box
+    font-family: 'Nunito', sans-serif
 
 body
     width: 100vw
     height: 100vh
-    background-color: #00052d
+    background-color: $black_color
     display: flex
     justify-content: center
     align-items: center
 
     .container
-        background-color: white
-        width: 80%
+        background-color: $backgrounds
+        width: 90%
+        max-width: 500px
         height: 80%
-        border: 1px solid red
+        border-radius: 20px
+        box-sizing: border-box
 
-
-        header
+        .header
             text-align: center
-            border: 1px solid red
+            padding: 40px 20px 10px 20px
+            margin-bottom: 20px
 
-        
-        main
-            width: 80%
+            h1
+                font: 800 3rem 'Nunito', sans-serif
+                color: $black_color
+
+        .main
+            width: 90%
+            max-width: 500px
             height: 10%
+            margin: 0 auto
             display: flex
             justify-content: center
             align-items: center
-            border: 1px solid red
+            margin-bottom: 20px
 
+            .toIncludeTask
+                width: 80%
+                height: 40px
+                word-break: break-word
+                outline: none
+                border: none
+                background-color: $color_light
+                padding-left: 5px
+                color: $white
+
+                &::placeholder
+                    color: $white
+                    padding-left: 5px
+                    font: 200 1rem 'Nunito', sans-serif
             
+            .addTask
+                cursor: pointer
+                height: 40px
+                width: 20%
+                max-width: 50px
+                outline: none
+                border: none
+                background-color: $transparent
+
+                i
+                    font-size: 1.5rem
+                    color: $iconAdd
+
+        .tasks
+            width: 100%
+            
+            .task
+                padding: 5px 5px 5px 10px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                height: max-content
+                width: 100%
+
+                p
+                    font: 400 1rem 'Nunito', sans-serif
+
+
+            .buttons 
+                width: 40%
+                max-width: 100px
+                height: 100%
+                display: flex
+                align-items: center
+                gap: 2px
+
+                button
+                    width: 50%
+                    cursor: pointer
+                    padding-block: 5px 
+
+                    i
+                        font-size: 1.5rem
+                    
+                    .fa-check-circle
+                        color: $iconCheck
+
+                    .fa-circle-xmark
+                        color: $iconX
             
