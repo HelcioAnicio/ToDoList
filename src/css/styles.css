@@ -73,12 +73,15 @@ body .container .tasks {
   width: 100%;
 }
 body .container .tasks .task {
+  border: 1px solid rgb(157, 192, 139);
+  border-radius: 5px;
+  margin: 0 auto;
   padding: 5px 5px 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: max-content;
-  width: 100%;
+  width: 95%;
 }
 body .container .tasks .task p {
   font: 400 1rem "Nunito", sans-serif;
@@ -90,6 +93,7 @@ body .container .tasks .buttons {
   display: flex;
   align-items: center;
   gap: 2px;
+  border-radius: 10px;
 }
 body .container .tasks .buttons button {
   width: 50%;
@@ -104,6 +108,19 @@ body .container .tasks .buttons button .fa-check-circle {
 }
 body .container .tasks .buttons button .fa-circle-xmark {
   color: rgb(255, 0, 0);
+}
+
+.error {
+  background-color: rgb(237, 241, 214) !important;
+  border: 2px solid rgb(255, 0, 0) !important;
+}
+.error::placeholder {
+  color: rgb(0, 0, 0) !important;
+}
+
+.finished {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /*# sourceMappingURL=styles.css.map */

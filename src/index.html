@@ -26,33 +26,17 @@
         </header>
         
         <main class="main">
-            <input class="toIncludeTask" type="text" placeholder="Write your task"/>
+            <input class="toIncludeTask" type="text" placeholder="Write your task" oninput="CheckInput()"/>
             <button class="addTask" type="submit">
                 <i class='fa fa-plus-circle'></i>
             </button>
         </main>
         
-        <div class="tasks">
-            <div class="task">
-                <p>Aqui você verá a tarefa a ser completada</p>
-                <div class="buttons">
-                    <button type="button" class="done">
-                        <i class='fa fa-check-circle'></i>
-                    </button>
-                    <button type="submit" class="delete">
-                        <i class='fa-solid fa-circle-xmark'></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="tasks"></div>
         
-        <footer>
-
-        </footer>
+        <footer></footer>
     
     </section>
-    
-
     <script src="./script.js"></script>
 </body>
 </html>
