@@ -6,56 +6,56 @@ const buttonDone = document.querySelectorAll('.done')
 const buttonDelete = document.querySelectorAll('.delete')
 
 class Task {
-    constructor (inputToIncludeTask, addTask) {
+    constructor (inputToIncludeTask) {
         this.inputToIncludeTask = inputToIncludeTask;
-        this.addTask = addTask;
+        this.createTaskElement();
     }
 
-    addTaskOnTaskField () {
-        taskField.innerHTML += `
-            <div class="task">
-                <p>${this.inputToIncludeTask.value}</p>
-                <div class="buttons">
-                    <button type="button" class="done">
-                        <i class='fa fa-check-circle'></i>
-                    </button>
-                    <button type="button" class="delete">
-                        <i class='fa-solid fa-circle-xmark'></i>
-                    </button>
-                </div>
+    createTaskElement() {
+        const taskElement = document.createElement("div");
+        taskElement.classList.add("task");
+        taskElement.innerHTML = `
+            <p>${this.inputToIncludeTask.value}</p>
+            <div class="buttons">
+                <button type="button" class="done">
+                    <i class='fa fa-check-circle'></i>
+                </button>
+                <button type="button" class="delete">
+                    <i class='fa-solid fa-circle-xmark'></i>
+                </button>
             </div>
         `;
+        taskElement.querySelector(".delete").addEventListener("click", () => {
+            taskElement.parentElement.removeChild(taskElement);
+        });
+        taskElement.querySelector(".done").addEventListener("click", () => {
+            taskElement.querySelector("p").classList.toggle('finished')
+        });
+        this.taskEl = taskElement;
     }
 
-    clean () {
-        this.inputToIncludeTask.value = '';
-        
+    emptyField() {
+        this.inputToIncludeTask.classList.add("error");
     }
 
-    removeTask (e) {
-        // taskField.removeChild(taskAdded);
-        let task = this.parentNode;
-        task.parentNode.removeChild(taskAdded);
+    fullField() {
+        if (this.inputToIncludeTask.value.length >= 1) {
+            this.inputToIncludeTask.classList.remove("error");        
+        } return
     }
 }
 
-
-const task = new Task (
-    inputToIncludeTask,
-    addTask
-);
-
 addTask.addEventListener('click', () => {
-    task.addTaskOnTaskField();
-    task.clean();
+    const task = new Task(inputToIncludeTask);
+    if (!inputToIncludeTask.value > '') {
+        task.emptyField();
+    } else {
+        taskField.appendChild(task.taskEl);
+        inputToIncludeTask.value = "";
+    }
 });
 
-// buttonDelete.addEventListener('click', () => {
-//     task.removeTask()
-// })
-
-buttonDelete.forEach((Button)=>{
-    Button.addEventListener('click', () => {
-        task.removeTask();
-    });   
-});
+function CheckInput(){
+    const task = new Task(inputToIncludeTask);
+    task.fullField();
+}
