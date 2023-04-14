@@ -10,7 +10,7 @@
 body
     width: 100vw
     height: 100vh
-    background-color: $black_color
+    background-color: $color_light
     display: flex
     justify-content: center
     align-items: center
@@ -22,15 +22,61 @@ body
         height: 80%
         border-radius: 20px
         box-sizing: border-box
-
+        transition: background 0.2s linear
+    
         .header
-            text-align: center
             padding: 40px 20px 10px 20px
             margin-bottom: 20px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 80%
+            margin: 0 auto
 
             h1
                 font: 800 3rem 'Nunito', sans-serif
                 color: $black_color
+
+            .themeColors
+                
+                .checkbox
+                    opacity: 0
+                    position: absolute
+
+                .check
+                    width: 50px
+                    height: 25px
+                    padding: 5px
+                    border-radius: 40px
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    background-color: $black
+                    transform: scale(1.5)
+                    cursor: pointer
+
+                    .fa-sun 
+                        color: yellow
+                    .fa-moon
+                        color: cyan
+                
+                .ball
+                    width: 20px
+                    height: 20px
+                    background-color: $white
+                    border-radius: 50% 
+                    position: absolute   
+                    top: 2px
+                    left: 2px
+                    transform: translateX(0px)
+                    transition: transform 0.2s linear
+
+                .checkbox:checked + .check .ball
+                    transform: translateX()20px  
+        
+        .containerDark 
+            background-color: $black_color
+
 
         .main
             width: 90%
