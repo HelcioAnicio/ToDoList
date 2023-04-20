@@ -10,10 +10,11 @@
 body
     width: 100vw
     height: 100vh
-    background-color: $color_light
+    background-color: $color_primary
     display: flex
     justify-content: center
     align-items: center
+    transition: background 0.2s linear
 
     .container
         background-color: $backgrounds
@@ -35,7 +36,7 @@ body
 
             h1
                 font: 800 3rem 'Nunito', sans-serif
-                color: $black_color
+                color: $color_terciary
 
             .themeColors
                 
@@ -44,6 +45,7 @@ body
                     position: absolute
 
                 .check
+                    position: relative
                     width: 50px
                     height: 25px
                     padding: 5px
@@ -72,10 +74,10 @@ body
                     transition: transform 0.2s linear
 
                 .checkbox:checked + .check .ball
-                    transform: translateX()20px  
+                    transform: translateX(25px)
         
         .containerDark 
-            background-color: $black_color
+            background-color: $color_terciary
 
 
         .main
@@ -94,7 +96,7 @@ body
                 word-break: break-word
                 outline: none
                 border: none
-                background-color: $color_light
+                background-color: $color_primary
                 padding-left: 5px
                 color: $white
 
@@ -120,7 +122,7 @@ body
             width: 100%
             
             .task
-                border: 1px solid $color_light
+                border: 1px solid $color_primary
                 border-radius: 5px
                 margin: 0 auto
                 padding: 5px 5px 5px 10px
@@ -167,5 +169,104 @@ body
         color: $black !important
 
 .finished
-    text-decoration: line-through
+    color: rgba(0, 0, 0, .6)
+
+
+// COLORS DARK
+
+.bodyDark
+    width: 100vw
+    height: 100vh
+    background-color: $color_terciary
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: background 0.2s linear
+
+    .containerDark
+        background-color: $backgrounds_dark
+        width: 90%
+        max-width: 500px
+        height: 80%
+        border-radius: 20px
+        box-sizing: border-box
+        transition: background 0.2s linear
+    
+        .headerDark
+            .h1Dark
+                color: $color_terciary
+
+            .themeColorsDark
+                .check
+                    position: relative
+                    width: 50px
+                    height: 25px
+                    padding: 5px
+                    border-radius: 40px
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    background-color: $black
+                    transform: scale(1.5)
+                    cursor: pointer
+
+                .ball
+                    width: 20px
+                    height: 20px
+                    background-color: $white
+                    border-radius: 50% 
+                    position: absolute   
+                    top: 2px
+                    left: 2px
+                    transform: translateX(0px)
+                    transition: transform 0.2s linear
+
+            .toIncludeTask
+                width: 80%
+                height: 40px
+                word-break: break-word
+                outline: none
+                border: none
+                background-color: $color_terciary
+                padding-left: 5px
+                color: $white
+
+                &::placeholder
+                    color: $white
+                    padding-left: 5px
+                    font: 200 1rem 'Nunito', sans-serif
+            
+                i
+                    font-size: 1.5rem
+                    color: $iconAdd
+
+        .tasks
+            .task
+                border: 1px solid $color_primary
+                justify-content: space-between
+                height: max-content
+                width: 95%
+
+            .buttons 
+                button
+                    width: 50%
+                    cursor: pointer
+                    padding-block: 5px 
+
+                    .fa-check-circle
+                        color: $iconCheck
+
+                    .fa-circle-xmark
+                        color: $iconX
+
+
+
+.error 
+    background-color: $backgrounds !important
+    border: 2px solid $iconX !important
+
+    &::placeholder
+        color: $black !important
+
+.finished
     color: rgba(0, 0, 0, .6)
