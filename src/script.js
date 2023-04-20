@@ -1,9 +1,16 @@
+// const body = document.getElementsByName('body');
+const container = document.querySelector('.container');
+const check = document.querySelector('.check');
 const inputToIncludeTask = document.querySelector('.toIncludeTask');
 const addTask = document.querySelector('.addTask')
 const taskField = document.querySelector('.tasks')
 const taskAdded = document.querySelectorAll('.task')
 const buttonDone = document.querySelectorAll('.done')
 const buttonDelete = document.querySelectorAll('.delete')
+
+check.addEventListener('click', () => {
+    document.body.classList.toggle('bodyDark')
+})
 
 class Task {
     constructor (inputToIncludeTask) {
@@ -59,3 +66,5 @@ function CheckInput(){
     const task = new Task(inputToIncludeTask);
     task.fullField();
 }
+
+
