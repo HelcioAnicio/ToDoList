@@ -1,6 +1,9 @@
-// const body = document.getElementsByName('body');
-const container = document.querySelector('.container');
 const check = document.querySelector('.check');
+const body = document.querySelector('body');
+const container = document.querySelector('.container');
+const title = document.querySelector('.title');
+const iconAddTask = document.querySelector('.fa');
+
 const inputToIncludeTask = document.querySelector('.toIncludeTask');
 const addTask = document.querySelector('.addTask')
 const taskField = document.querySelector('.tasks')
@@ -9,7 +12,13 @@ const buttonDone = document.querySelectorAll('.done')
 const buttonDelete = document.querySelectorAll('.delete')
 
 check.addEventListener('click', () => {
-    document.body.classList.toggle('bodyDark')
+    body.classList.toggle('bodyDark');
+    container.classList.toggle('containerDark');
+    title.classList.toggle('titleDark');
+
+    iconAddTask.classList.toggle('faDark');
+
+
 })
 
 class Task {
