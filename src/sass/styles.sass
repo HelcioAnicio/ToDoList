@@ -34,7 +34,7 @@ body
             width: 80%
             margin: 0 auto
 
-            h1
+            .title
                 font: 800 3rem 'Nunito', sans-serif
                 color: $color_terciary
 
@@ -75,10 +75,6 @@ body
 
                 .checkbox:checked + .check .ball
                     transform: translateX(25px)
-        
-        .containerDark 
-            background-color: $color_terciary
-
 
         .main
             width: 90%
@@ -114,7 +110,7 @@ body
                 border: none
                 background-color: $transparent
 
-                i
+                .fa
                     font-size: 1.5rem
                     color: $iconAdd
 
@@ -172,29 +168,19 @@ body
     color: rgba(0, 0, 0, .6)
 
 
-// COLORS DARK
 
+
+/**/
+// COLORS DARK
 .bodyDark
-    width: 100vw
-    height: 100vh
-    background-color: $color_terciary
-    display: flex
-    justify-content: center
-    align-items: center
-    transition: background 0.2s linear
+    background-color: $dark_primary
 
     .containerDark
         background-color: $backgrounds_dark
-        width: 90%
-        max-width: 500px
-        height: 80%
-        border-radius: 20px
-        box-sizing: border-box
-        transition: background 0.2s linear
     
-        .headerDark
-            .h1Dark
-                color: $color_terciary
+        .header
+            .titleDark
+                color: $dark_terciary
 
             .themeColorsDark
                 .check
@@ -221,13 +207,14 @@ body
                     transform: translateX(0px)
                     transition: transform 0.2s linear
 
-            .toIncludeTask
+        .main
+            .toIncludeTaskDark
                 width: 80%
                 height: 40px
                 word-break: break-word
                 outline: none
                 border: none
-                background-color: $color_terciary
+                background-color: $dark_secundary
                 padding-left: 5px
                 color: $white
 
@@ -236,9 +223,8 @@ body
                     padding-left: 5px
                     font: 200 1rem 'Nunito', sans-serif
             
-                i
-                    font-size: 1.5rem
-                    color: $iconAdd
+                .faDark
+                    color: $iconAddDark
 
         .tasks
             .task

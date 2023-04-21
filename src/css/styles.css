@@ -33,7 +33,7 @@ body .container .header {
   width: 80%;
   margin: 0 auto;
 }
-body .container .header h1 {
+body .container .header .title {
   font: 800 3rem "Nunito", sans-serif;
   color: rgb(18, 48, 9);
 }
@@ -74,9 +74,6 @@ body .container .header .themeColors .ball {
 body .container .header .themeColors .checkbox:checked + .check .ball {
   transform: translateX(25px);
 }
-body .container .containerDark {
-  background-color: rgb(18, 48, 9);
-}
 body .container .main {
   width: 90%;
   max-width: 500px;
@@ -111,7 +108,7 @@ body .container .main .addTask {
   border: none;
   background-color: rgba(250, 250, 250, 0);
 }
-body .container .main .addTask i {
+body .container .main .addTask .fa {
   font-size: 1.5rem;
   color: rgb(0, 208, 28);
 }
@@ -168,28 +165,17 @@ body .container .tasks .buttons button .fa-circle-xmark {
   color: rgba(0, 0, 0, 0.6);
 }
 
+/**/
 .bodyDark {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(18, 48, 9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 0.2s linear;
+  background-color: rgb(0, 51, 0);
 }
 .bodyDark .containerDark {
   background-color: rgb(139, 142, 124);
-  width: 90%;
-  max-width: 500px;
-  height: 80%;
-  border-radius: 20px;
-  box-sizing: border-box;
-  transition: background 0.2s linear;
 }
-.bodyDark .containerDark .headerDark .h1Dark {
-  color: rgb(18, 48, 9);
+.bodyDark .containerDark .header .titleDark {
+  color: rgb(157, 192, 139);
 }
-.bodyDark .containerDark .headerDark .themeColorsDark .check {
+.bodyDark .containerDark .header .themeColorsDark .check {
   position: relative;
   width: 50px;
   height: 25px;
@@ -202,7 +188,7 @@ body .container .tasks .buttons button .fa-circle-xmark {
   transform: scale(1.5);
   cursor: pointer;
 }
-.bodyDark .containerDark .headerDark .themeColorsDark .ball {
+.bodyDark .containerDark .header .themeColorsDark .ball {
   width: 20px;
   height: 20px;
   background-color: rgb(250, 250, 250);
@@ -213,24 +199,23 @@ body .container .tasks .buttons button .fa-circle-xmark {
   transform: translateX(0px);
   transition: transform 0.2s linear;
 }
-.bodyDark .containerDark .headerDark .toIncludeTask {
+.bodyDark .containerDark .main .toIncludeTaskDark {
   width: 80%;
   height: 40px;
   word-break: break-word;
   outline: none;
   border: none;
-  background-color: rgb(18, 48, 9);
+  background-color: rgb(0, 100, 0);
   padding-left: 5px;
   color: rgb(250, 250, 250);
 }
-.bodyDark .containerDark .headerDark .toIncludeTask::placeholder {
+.bodyDark .containerDark .main .toIncludeTaskDark::placeholder {
   color: rgb(250, 250, 250);
   padding-left: 5px;
   font: 200 1rem "Nunito", sans-serif;
 }
-.bodyDark .containerDark .headerDark .toIncludeTask i {
-  font-size: 1.5rem;
-  color: rgb(0, 208, 28);
+.bodyDark .containerDark .main .toIncludeTaskDark .faDark {
+  color: rgb(157, 192, 139);
 }
 .bodyDark .containerDark .tasks .task {
   border: 1px solid rgb(157, 192, 139);
