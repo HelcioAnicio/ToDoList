@@ -1,11 +1,8 @@
 # ToDoList
-
-<!--
 This website was a work which i wanted to practice more my skill with JS. I used for firsttime React.JS and i put all of this thnigs on this project. It's possible to interect by filling out the form. 
 
 
 ## Table of contents
-
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -23,90 +20,64 @@ This website was a work which i wanted to practice more my skill with JS. I used
 ## Overview
 
 ### The challenge
-
 The users should be able to:
-- Show informations about me.
-- Put the technologies which i now work and use.
-- Show my all project i had done before, and to be easy to access just one click on icons.
-- Share my Social Medias.
+- Add tasks it need to do.
+- It's possible to mark the task as done.
+- The completed task has a line across the word.
+- Button change the theme color of the website.
 - View the optimal layout depending on their device's screen size.
 
 ### Screenshot
-- ![image](https://user-images.githubusercontent.com/117602073/230394196-60ca253d-bd00-42ec-a8ef-9c969403f3f8.png)
+- ![image](https://user-images.githubusercontent.com/117602073/234730798-ccbf8253-407d-40ab-9eff-9f7a7f1ed306.png)
 
--->
+
 ### Links
-
 - https://to-do-list-helcioanicio.vercel.app/
-<!--
+
+
 ## My process
 
 ### Built with
-
 - Semantic HTML5
-- SCSS
-- SCSS scops and variables.
+- SASS
+- SASS scops and variables.
 - Flexbox
-- Responsiveness
-- Media-queires
 - JavaScript
 - Conditional
 - Metods
-- React
-- Components
-- Ternary conditional
-- UseState
-- Firebase datebase
+- Classes
+- Functions
+- Object Oriented Programming
 
 ### What I learned
-
-How to use ternary conditional, all the conditional on react, and declare variables with useState.
+I learned how to create a button with validation, if it's empty, the progress won't go further, from there how to add it in HTML already styled with classes and also, everything done with OOP methods and classes.
 ```JS
-const firebaseApp = {
-        apiKey: process.env.REACT_APP_API_KEY,
-        authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-        projectId: process.env.REACT_APP_PROJECT_ID,
-        storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-        messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-        appId: process.env.REACT_APP_APP_ID,
-        measurementId: process.env.REACT_APPMEASUREMENT_ID, 
-    };
+addTask.addEventListener('click', () => {
+    const task = new Task(inputToIncludeTask);
+    if (!inputToIncludeTask.value > '') {
+        task.emptyField();
+    } else {
+        taskField.appendChild(task.taskEl);
+        inputToIncludeTask.value = "";
+    }
+});
 ```
 
 ### Continued development
-
-I wanted to learn more JS, and practice the logic on the projects, until to be easier to do.
+I will be working on improving my programming logic, and also OOP.
+I want to practice more my skills with JS Vanilla and then go up my knowledge and improve my projects.
 
 ### Useful resources
-
 This resource helped me a lot to understand how to do to implemented JS.
 https://www.w3schools.com/
 https://developer.mozilla.org/en-US/
 https://stackoverflow.com/
-https://www.youtube.com/watch?v=-nYNd6EuZHU&t=455s
 
 
 ## Author
-
 - Linkedin - https://www.linkedin.com/in/helcio-anicio/ 
 - Vercel - https://vercel.com/helcioanicio
--->
+
 <!--
 ## Acknowledgments
  -->
-<!--
-# Building your project
-
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
--->
